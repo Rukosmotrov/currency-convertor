@@ -1,0 +1,42 @@
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(95, 95, 95);
+        width: 50vh;
+        height: 20vh;
+        border: 1px solid rgb(155, 155, 155);
+        
+        input {
+            width: 25vh;
+            height: 20px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            background-color: rgb(95, 95, 95);
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    
+        select {
+            height: calc(20px + 1rem);
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background-color: rgb(95, 95, 95);
+            color: white;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<div class="input-wrapper" *ngFor="let value of currencies; index as i">
+    <div>
+        <input 
+        type="number"
+        placeholder="0"
+        (input)="getRates(i)" 
+        [(ngModel)]="value.input_value"
+    >
+        <select 
+            [ngModel]="i"
+            (ngModelChange)="onCurrencyChange(i, $event)"
+            [(ngModel)]="value.base_value"
+        >
+            <option 
+                *ngFor="let currency of currencies[i].values"
+                [ngValue]="currency === value.base_value ? value.base_value : currency"
+                [selected]="currency === value.base_value"
+            >{{currency}}</option>
+        </select>
+    </div>
+</div>

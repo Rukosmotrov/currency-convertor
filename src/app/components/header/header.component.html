@@ -1,0 +1,5 @@
+<div class="header">
+    <div *ngFor="let rate of rates" class="rate">
+        {{rate.base_code}} / {{rate.conversion_rates.UAH | number:'1.0-2'}}
+    </div>
+</div>
